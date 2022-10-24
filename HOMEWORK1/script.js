@@ -12,11 +12,12 @@ a = b;
 alert(`${a}, ${b}`);
 
 //Task 4
+let a;
 let taskArr = {
 str: "Denys",
 num: 298,
 bool: true,
-undfnd: "",
+undfnd: a,
 nll: null,
 };
 
