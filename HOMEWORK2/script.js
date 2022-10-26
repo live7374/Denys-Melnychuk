@@ -78,10 +78,11 @@ else
 //1st variation
 let today = new Date();
 let time = today.getHours();
-(time < 5 && time == 23)? console.log(`Good Night`): "";
-(time < 11 && time >= 5)? console.log(`Good Morning`): "";
-(time < 17 && time >= 11)? console.log(`Good Day`): "";
-(time < 23 && time >= 17)? console.log(`Good Evening`): "";
+
+(time < 6)? console.log(`Good Morning`): 
+(time < 12)? console.log(`Good Day`): 
+(time < 18)? console.log(`Good Evening`): 
+console.log(`Good Night`);
 
 //2nd variation
 let today = new Date();
