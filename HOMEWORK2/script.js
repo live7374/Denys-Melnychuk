@@ -78,7 +78,6 @@ else
 //1st variation
 let today = new Date();
 let time = today.getHours();
-
 (time < 6)? console.log(`Good Morning`): 
 (time < 12)? console.log(`Good Day`): 
 (time < 18)? console.log(`Good Evening`): 
