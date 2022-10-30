@@ -12,14 +12,14 @@ for (let i = 0; i < newArray.length; newI = newI + newArray[i])
 };
 
 // with while
-let newArray = [2, 3, 4, 5];
-let i = 0;
-let newI = 0;
-while ( i < newArray.length ){
-    newI = newI + newArray[i];
-    console.log(newI);
-    i++;
-}
+// let newArray = [2, 3, 4, 5];
+// let i = 0;
+// let newI = 0;
+// while ( i < newArray.length ){
+//     newI = newI + newArray[i];
+//     console.log(newI);
+//     i++;
+// }
 
 
 // Task 2
