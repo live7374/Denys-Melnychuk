@@ -5,7 +5,7 @@
 //with for
 let newArray = [2, 3, 4, 5];
 let newI = newArray[0]
-for (let i = 0; i < newArray.length; newI = newI + newArray[i])
+for (let i = 0; i < newArray.length; newI = newI * newArray[i])
 {
     console.log(newI);
     i++;
@@ -14,9 +14,9 @@ for (let i = 0; i < newArray.length; newI = newI + newArray[i])
 // with while
 // let newArray = [2, 3, 4, 5];
 // let i = 0;
-// let newI = 0;
+// let newI = 1;
 // while ( i < newArray.length ){
-//     newI = newI + newArray[i];
+//     newI = newI * newArray[i];
 //     console.log(newI);
 //     i++;
 // }
