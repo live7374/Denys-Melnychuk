@@ -136,15 +136,53 @@ class GeomretricFigure {
 };
 
 class Triangle extends GeomretricFigure {
+    constructor (A, B) {
+        super();
+        this.A = A;
+        this.B = B;
+    }
+    getArea () {
+        return this.A * this.B * 0.5
+    }
 
 };
 
 class Square extends GeomretricFigure {
+    constructor (A) {
+        super();
+        this.A = A;
+    }
+    getArea () {
+        return this.A * this.A
+    }
 };
 
 class Circle extends GeomretricFigure {
+    constructor (A) {
+        super();
+        this.A = A;
+    }
+    getArea () {
+        return 3.14 * this.A ** 2
+    }
 };
 
+function handleFigures(figures) {
+    let array = [];
+    for (let i of figures) {
+        if (i instanceof GeomretricFigure) {
+            console.log('Geometric figure: ' + i.toString() + ' area - ' + i.getArea());
+        }
+        array.push(i.getArea());
+    }
+    let sumAll = array.reduce(function(sum, figure) {
+        return sum + figure;
+    }, 0);
+    console.log(sumAll);
+};
 
-// const figures = [new Triangle(4, 5), new Square(7), new Circle(5)];
-// console.log(handleFigures(figures));
+const figures = [new Triangle(4, 5), new Square(7), new Circle(5)];
+console.log(figures);
+console.log(handleFigures(figures));
+
+
