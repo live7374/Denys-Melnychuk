@@ -71,7 +71,6 @@ class Worker {
         this.dayRate = dayRate;
         this.workingDays = workingDays;
         workersList.push(this);
-        workersList.push(this.showSalaryWithExperience());
     }
         #experience = +1.2
 
@@ -101,20 +100,26 @@ let worker3 = new Worker("Andy Ander", 29, 23);
 
 // console.log(Object.values(worker1))
 
-
-// function sortSalary(workersList) {
-//         workersList.sort()
-//         return console.table(workersList);
-
-//     }
-
-for (let element of workersList) {
-    console.log(Object.values(element));
-}
-
-// for (let value in workersList) {
-//     console.log('Key', value)
+function sortBySalary() {
+// for (let element of workersList) {
+//     console.log(Object.values(element));
 // }
+
+let sortedArray = workersList.map(person =>{
+    return {
+        pName: person.fullName,
+        pSalary: person.showSalaryWithExperience()
+    }
+})
+
+sortedArray.sort((a, b) => {
+    return b.pSalary - a.pSalary;
+});
+
+sortedArray.forEach((e) => {
+    console.log(`${e.pName} ${e.pSalary}`);
+});
+}
 
 
 
