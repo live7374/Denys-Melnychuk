@@ -16,16 +16,6 @@ function changeCSS(){
     text.style.fontFamily = "Comic Sans MS";
 
 }
-// let btncs  = document.querySelector("btncs");
-// console.log(btncs.innerHTML)
-
-// btncs.addEventListener("click", function(event){
-//     event.target.style
-// })
-
-// btncs.onclick = function(){console.log("btncs")}
-
-
 
 // Task 3
 
@@ -46,6 +36,34 @@ function delColor(){
 
 // Task 5
 
+liveButton.addEventListener("click", liveButtonClick);
+liveButton.addEventListener("mouseover", liveButtonOver);
+liveButton.addEventListener("mouseout", liveButtonOut);
+let message = document.getElementById("message")
+let myLive = document.querySelector("#myLive")
+
+function liveButtonClick(){
+    message.innerText += "Click \r\n";
+}
+
+function liveButtonOver(){
+    message.innerText += "Over \r\n";
+}
+
+function liveButtonOut(){
+    message.innerText += "Out \r\n";
+}
+
+
+
 
 // Task 6
+let sizeMe= document.getElementById("sizeMe")
 
+window.addEventListener('resize', sizing)
+
+function sizing(){
+    sizeMe.innerText = `Width: ${window.innerWidth}, Height: ${window.innerHeight}`;
+}
+
+// Task 7
