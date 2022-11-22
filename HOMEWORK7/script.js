@@ -67,3 +67,40 @@ function sizing(){
 }
 
 // Task 7
+
+
+let cityArr = {
+    'ger' : ['Berlin', 'Frankfurt', 'Dortmund', 'Hamburg'],
+    'ukr' : ['Kyiv', 'Lviv', 'Dnipro', 'Odessa'],
+    'usa' : ['New York', 'Washington', 'Atlanta', 'San Francisco'],
+}
+
+
+let countrySelect = document.getElementById('country')
+// console.log(countrySelect)
+countrySelect.addEventListener('change', getList)
+countrySelect.addEventListener('change', toParagraph)
+
+let citySelect = document.getElementById('cities')
+citySelect.addEventListener('change', toParagraph)
+// console.log(citySelect)
+
+let parag = document.querySelector('.paragraph')
+// console.log(parag)
+
+function getList () {
+    citySelect.innerHTML = ""
+    let selected_country = countrySelect.value 
+    for (let i = 0; i < cityArr[selected_country].length; i++) {
+        let new_option = document.createElement('option')
+        new_option.innerHTML = cityArr[selected_country][i]
+        citySelect.appendChild(new_option)
+    }
+}
+
+function toParagraph() {
+    parag.innerHTML = ""
+    let countryOption = countrySelect.options[countrySelect.selectedIndex].text 
+    let cityOption = citySelect.options[citySelect.selectedIndex].text
+    parag.innerHTML = countryOption + ", " + cityOption   
+}
