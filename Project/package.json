@@ -1,0 +1,19 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "description": "My first project for news agregation",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha.js --timeout=30000 ./tests/sample.test.js"
+  },
+  "keywords": [
+    "news",
+    "agreggator"
+  ],
+  "author": "Denys",
+  "license": "ISC",
+  "dependencies": {
+    "mocha": "^10.1.0",
+    "puppeteer": "^19.3.0"
+  }
+}
