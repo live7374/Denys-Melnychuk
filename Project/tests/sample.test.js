@@ -1,21 +1,3 @@
-const puppeteer = require ('puppeteer')
-
-describe (' My First Puppeteer test ', function () {
-    it ('should launch the browser', async function () {
-        const browser = await puppeteer.launch({
-            headless: true,
-            slowMo: 10,
-            devtools: false,
-        })
-        const page = await browser.newPage()
-        await page.goto('http://reddit.com/')
-        // await page.waitFor(3000)
-        await page.waitForSelector('h1')
-        const title = await page.title()
-        const text = await page.$eval('h1', element => element.textContent)
-        console.log('TITLE: ' + title)
-        console.log('TEXT: ' + text)
-        await browser.close()
-
-    })
-})
+version https://git-lfs.github.com/spec/v1
+oid sha256:c9c092a433d1b04d3cc1962a821747f438ed622ebd9f7de0b9842c6f7a99b37c
+size 693
