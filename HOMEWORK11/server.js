@@ -10,13 +10,10 @@ const app = express()
 
 app.use(cors())
 
-app.get('/', (req, res) => {
-    res.json('This is a server page')
-})
+// app.get('/', (req, res) => {
+//     res.json('This is a server page')
+// })
 
-//app.get('/', (req, res) => {res.json(personal())})
-
-//personal()
-//console.log(persInfo)
+app.get('/', (req, res) => {res.json(personal())})
 
 app.listen(port, () => {console.log(`Server has started on port: ${port}`)})
